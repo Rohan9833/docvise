@@ -2,11 +2,11 @@ import { ChevronRight, QrCode, NotebookPen, Sparkles } from 'lucide-react';
 import { SectionHeader, Reveal, WhatsAppIcon, PdfIcon } from '../components/ui.jsx';
 
 const STEPS = [
-  { title: 'Scan QR', text: 'Doctor scans their unique QR code.', icon: <QrCode className="h-11 w-11 text-navy" strokeWidth={1.6} /> },
-  { title: 'Open WhatsApp', text: 'DocVise opens through WhatsApp.', icon: <WhatsAppIcon className="h-11 w-11" /> },
-  { title: 'Enter Advice & Language', text: 'Doctor enters instructions and selects the patient’s language.', icon: <NotebookPen className="h-11 w-11 text-brand-500" strokeWidth={1.6} /> },
-  { title: 'Visual Advice', text: 'DocVise transforms the instructions into multilingual illustrations.', icon: <Sparkles className="h-11 w-11 text-brand-500" strokeWidth={1.6} /> },
-  { title: 'Receive PDF', text: 'The illustrated PDF is delivered to the doctor on WhatsApp.', icon: <PdfIcon className="h-11 w-11" /> },
+  { title: 'Scan QR', text: 'Doctor scans their unique QR code.', icon: <QrCode className="h-9 w-9 sm:h-11 sm:w-11 text-navy" strokeWidth={1.6} /> },
+  { title: 'Open WhatsApp', text: 'DocVise opens through WhatsApp.', icon: <WhatsAppIcon className="h-9 w-9 sm:h-11 sm:w-11" /> },
+  { title: 'Enter Advice & Language', text: 'Doctor enters instructions and selects the patient’s language.', icon: <NotebookPen className="h-9 w-9 sm:h-11 sm:w-11 text-brand-500" strokeWidth={1.6} /> },
+  { title: 'Visual Advice', text: 'DocVise transforms the instructions into multilingual illustrations.', icon: <Sparkles className="h-9 w-9 sm:h-11 sm:w-11 text-brand-500" strokeWidth={1.6} /> },
+  { title: 'Receive PDF', text: 'The illustrated PDF is delivered to the doctor on WhatsApp.', icon: <PdfIcon className="h-9 w-9 sm:h-11 sm:w-11" /> },
 ];
 
 export default function HowItWorks() {
@@ -26,7 +26,7 @@ export default function HowItWorks() {
               <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-600 font-display text-[16px] font-bold text-white ring-4 ring-white lg:absolute lg:-top-4 lg:left-4 lg:h-9 lg:w-9 lg:text-[15px]">
                 {i + 1}
               </span>
-              <div className="card flex flex-1 items-center gap-4 p-4 sm:p-5 lg:h-full lg:flex-col lg:items-center lg:px-4 lg:pb-6 lg:pt-9 lg:text-center">
+              <div className="card flex flex-1 items-center gap-3 p-3 sm:gap-4 sm:p-5 lg:h-full lg:flex-col lg:items-center lg:px-4 lg:pb-6 lg:pt-9 lg:text-center">
                 <span className="shrink-0" aria-hidden="true">{s.icon}</span>
                 <span>
                   <h3 className="font-display text-[17px] font-bold leading-snug text-navy lg:text-[15.5px]">{s.title}</h3>
