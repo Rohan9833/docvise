@@ -106,8 +106,12 @@ export default function Hero() {
             <span className="relative inline-block">Made Simple.<Swoosh /></span>
           </h1>
           
-        <Reveal className="order-2 lg:order-none lg:col-start-1 lg:row-start-1">
-          <div className="order-3 flex flex-row gap-2 sm:flex-row lg:order-none lg:-mt-2">
+        <Reveal className="order-2 flex flex-col lg:order-none lg:col-start-1 lg:row-start-2">
+          <p className="order-2 mt-7 max-w-[34rem] text-[17px] leading-relaxed text-navy/85 sm:order-1 sm:mt-0 sm:text-[18px]">
+            Transforming doctors’ instructions into multilingual, illustrated
+            patient guidance—delivered as a shareable PDF through WhatsApp.
+          </p>
+          <div className="order-1 mt-0 flex flex-row gap-2 sm:order-2 sm:mt-5 sm:flex-row lg:mt-4">
           <Button
             size="lg"
             // className="w-full sm:w-auto h-10 px-4 text-[13px] lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]"
@@ -134,11 +138,9 @@ export default function Hero() {
             See How It Works
           </Button>
         </div>
-          <p className="mt-7 max-w-[34rem] text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
-            Transforming doctors’ instructions into multilingual, illustrated
-            patient guidance—delivered as a shareable PDF through WhatsApp.
-          </p>
-          <ul className="mt-7 grid max-w-[34rem] grid-cols-3 gap-3">
+          </Reveal>
+
+        <ul className="order-3 mt-7 grid max-w-[34rem] grid-cols-3 gap-3 lg:order-none lg:col-span-2 lg:row-start-3 lg:mt-0 lg:max-w-none">
             {FEATURES.map((f) => (
               <li
                 key={f.label}
@@ -149,7 +151,6 @@ export default function Hero() {
               </li>
             ))}
           </ul>
-        </Reveal>
 
         <Reveal
           delay={0.1}
