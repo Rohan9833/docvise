@@ -1,27 +1,54 @@
-import { Logo } from '../components/ui.jsx';
 import { useModal } from '../hooks/useModal.js';
 
-const PRIVACY_URL = 'https://digilateral.com/privacy';
+const FOOTER_LINKS = [
+  { label: 'How It Works', href: '#how-it-works' },
+  { label: 'See It in Action', href: '#in-action' },
+  { label: 'Why DocVise', href: '#why-docvise' },
+  { label: 'Analytics', href: '#analytics' },
+  { label: 'Multilingual', href: '#multilingual' },
+];
 
 export default function Footer() {
   const { open } = useModal();
-  const link = 'min-h-11 px-1 text-[14px] text-ink/80 underline-offset-4 hover:text-brand-600 hover:underline';
+
   return (
-    <footer className="border-t border-line bg-white">
-      <div className="container-site flex flex-col items-center gap-5 py-8 text-center lg:flex-row lg:justify-between lg:text-left">
-        <Logo className="h-12 w-auto" />
-        <p className="text-[14px] text-ink/80">A digiLATERAL offering</p>
-        <nav aria-label="Legal and contact">
-          <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
-            <li><a href={PRIVACY_URL} className={link}>Privacy Policy</a></li>
-            <li aria-hidden="true" className="hidden text-line sm:block">|</li>
-            <li><button type="button" className={link} onClick={() => open('terms')}>Terms &amp; Conditions</button></li>
-            <li aria-hidden="true" className="hidden text-line sm:block">|</li>
-            <li><button type="button" className={link} onClick={() => open('enquiry', { mode: 'contact' })}>Contact</button></li>
+    <footer className="bg-[#0d1d3b] text-white">
+      <div className="container-site flex flex-col items-center gap-5 px-5 py-8 text-center sm:gap-6 sm:py-10">
+        <p className="text-sm text-white/75 sm:text-base">
+          DocVise · Multilingual Patient Guidance · Illustrated PDFs
+        </p>
+
+        <nav aria-label="Footer navigation">
+          <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[15px] font-semibold sm:gap-x-8 sm:text-base">
+            {FOOTER_LINKS.map((link) => (
+              <li key={link.label}>
+                <a href={link.href} className="transition-colors hover:text-brand-300">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+            <li>
+              <button type="button" onClick={() => open('enquiry')} className="transition-colors hover:text-brand-300">
+                Request Demo
+              </button>
+            </li>
+            <li>
+              <button type="button" onClick={() => open('terms')} className="transition-colors hover:text-brand-300">
+                Terms &amp; Conditions
+              </button>
+            </li>
+            <li>
+              <a href="https://digilateral.com/privacy" className="transition-colors hover:text-brand-300">
+                Privacy Policy
+              </a>
+            </li>
           </ul>
         </nav>
+
+        <p className="border-t border-white/15 pt-4 text-sm text-white/60 sm:pt-5 sm:text-base">
+          © {new Date().getFullYear()} DocVise. A digiLATERAL offering.
+        </p>
       </div>
-      <p className="border-t border-line py-4 text-center text-[12.5px] text-muted">© {new Date().getFullYear()} digiLATERAL. DocVise is a product of digiLATERAL.</p>
     </footer>
   );
 }
