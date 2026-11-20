@@ -100,7 +100,7 @@ export default function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand-100/60 blur-3xl"
       />
-      <div className="container-site relative grid gap-x-10 gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:items-center">
+      <div className="container-site relative grid gap-x-10 gap-y-6 sm:gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:items-center">
         <h1 id="hero-title" className="text-[20px] leading-[1.15] font-extrabold sm:text-[54px] lg:text-[52px] xl:text-[58px]">
             Doctor’s Advice,<span className="gradient-text">Made Visual.</span> <br />
             <span className="relative inline-block">Made Simple.<Swoosh /></span>
