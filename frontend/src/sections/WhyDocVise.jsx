@@ -11,7 +11,7 @@ const BENEFITS = [
 
 export default function WhyDocVise() {
   return (
-    <section id="why-docvise" aria-labelledby="why-title" className="scroll-mt-20 py-14 lg:py-16">
+    <section id="why-docvise" aria-labelledby="why-title" className="scroll-mt-20 py-8 lg:py-16">
       <div className="container-site grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:items-center">
         <div>
           <Reveal>
