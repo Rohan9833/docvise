@@ -18,13 +18,14 @@ export const env = {
   adminEmail: (process.env.ADMIN_EMAIL || '').trim().toLowerCase(),
   adminPasswordHash: process.env.ADMIN_PASSWORD_HASH || '',
   smtp: {
-    host: process.env.SMTP_HOST || '',
-    port: int(process.env.SMTP_PORT, 587),
-    secure: String(process.env.SMTP_SECURE).toLowerCase() === 'true',
-    user: process.env.SMTP_USER || '',
-    pass: process.env.SMTP_PASS || '',
-    from: process.env.NOTIFY_FROM || '',
-    to: process.env.NOTIFY_TO || '',
+    // Support DocTalk's EMAIL_* variables and keep SMTP_* backward compatible.
+    host: process.env.EMAIL_HOST || process.env.SMTP_HOST || '',
+    port: int(process.env.EMAIL_PORT || process.env.SMTP_PORT, 465),
+    secure: String(process.env.EMAIL_SECURE ?? process.env.SMTP_SECURE ?? 'true').toLowerCase() === 'true',
+    user: process.env.EMAIL_USER || process.env.SMTP_USER || '',
+    pass: process.env.EMAIL_PASS || process.env.SMTP_PASS || '',
+    from: process.env.EMAIL_FROM || process.env.NOTIFY_FROM || process.env.EMAIL_USER || process.env.SMTP_USER || '',
+    to: process.env.NOTIFY_TO || 'info@digilateral.com',
   },
 };
 
@@ -33,6 +34,6 @@ export const adminConfigured = () => env.jwtSecret.length >= 32 && Boolean(env.a
 
 export function checkEnv(logger = console) {
   if (!adminConfigured()) logger.warn('[config] Admin API disabled: set JWT_SECRET (32+ chars), ADMIN_EMAIL and ADMIN_PASSWORD_HASH to enable it.');
-  if (!env.smtp.host) logger.warn('[config] SMTP not configured: enquiries will be saved, email notifications skipped.');
+  if (!env.smtp.host || !env.smtp.user || !env.smtp.pass) logger.warn('[config] SMTP not configured: enquiries will be saved, email notifications skipped.');
   if (env.isProd && env.allowedOrigins.some((o) => o.includes('localhost'))) logger.warn('[config] ALLOWED_ORIGINS includes localhost in production.');
 }
