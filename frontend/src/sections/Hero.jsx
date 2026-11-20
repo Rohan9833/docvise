@@ -49,8 +49,8 @@ export default function Hero() {
       <div className="container-site relative grid gap-x-10 gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:items-center">
         <Reveal className="lg:col-start-1 lg:row-start-1">
           <h1 id="hero-title" className="text-[40px] leading-[1.06] font-extrabold xs:text-[44px] sm:text-[54px] lg:text-[52px] xl:text-[58px]">
-            Doctor’s Advice.<br />Made Visual.<br />
-            <span className="relative inline-block"><span className="gradient-text">Made Simple.</span><Swoosh /></span>
+            Doctor’s Advice,<span className="gradient-text">Made Visual.</span> <br />
+            <span className="relative inline-block">Made Simple.<Swoosh /></span>
           </h1>
           <p className="mt-7 max-w-[34rem] text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
             Transforming doctors’ instructions into multilingual, illustrated patient guidance—delivered as a shareable PDF through WhatsApp.
