@@ -10,6 +10,7 @@ import { useModal } from "../hooks/useModal.js";
 import { button_click } from "../analytics/events.js";
 
 const MARATHI = { code: "mr", native: "मराठी" };
+
 const ROWS = [
   {
     img: "walk",
@@ -27,13 +28,20 @@ const ROWS = [
     text: "डॉक्टरांनी लिहून दिलेली औषधे वेळेवर घ्या.",
   },
 ];
+
 const FEATURES = [
-  { icon: <WhatsAppIcon className="h-8 w-8" />, label: "WhatsApp-Based" },
+  {
+    icon: <WhatsAppIcon className="h-8 w-8" />,
+    label: "WhatsApp-Based",
+  },
   {
     icon: <Languages className="h-8 w-8 text-brand-500" strokeWidth={1.8} />,
     label: "Multilingual",
   },
-  { icon: <PdfIcon className="h-8 w-8" />, label: "Illustrated PDFs" },
+  {
+    icon: <PdfIcon className="h-8 w-8" />,
+    label: "Illustrated PDFs",
+  },
 ];
 
 function Swoosh() {
@@ -62,14 +70,16 @@ function ProductVisual() {
         aria-hidden="true"
         className="absolute -inset-x-6 -inset-y-8 -z-10 rounded-[3rem] bg-[radial-gradient(60%_60%_at_60%_45%,#ece3fd_0%,#f4effe_45%,transparent_75%)]"
       />
+
       <Scaled base={600}>
         <div className="relative h-[520px]">
           <PhoneFrame
             label="DocVise conversation on WhatsApp ending with the illustrated PDF"
-            className="absolute left-9 top-0 w-[238px] z-[-5]"
+            className="absolute left-9 top-0 z-[-5] w-[238px]"
           >
             <HeroChat />
           </PhoneFrame>
+
           <PdfList
             lang={MARATHI}
             rows={ROWS}
@@ -77,19 +87,13 @@ function ProductVisual() {
           />
         </div>
       </Scaled>
-      <svg
-        viewBox="0 0 24 24"
-        className="absolute -right-1 bottom-[12%] h-6 w-6 text-orange sm:h-7 sm:w-7"
-        aria-hidden="true"
-      >
-        
-      </svg>
     </div>
   );
 }
 
 export default function Hero() {
   const { open } = useModal();
+
   return (
     <section
       id="top"
@@ -100,66 +104,86 @@ export default function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand-100/60 blur-3xl"
       />
-      <div className="container-site relative grid gap-x-10 gap-y-6 sm:gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:items-center">
-        <h1 id="hero-title" className="text-[20px] leading-[1.15] font-extrabold sm:text-[54px] lg:text-[52px] xl:text-[58px]">
-            Doctor’s Advice,<span className="gradient-text">Made Visual.</span> <br />
-            <span className="relative inline-block">Made Simple.<Swoosh /></span>
-          </h1>
-          
-        <Reveal className="order-2 flex flex-col lg:order-none lg:col-start-1 lg:row-start-2">
-          <p className="order-2 mt-7 max-w-[34rem] text-[17px] leading-relaxed text-navy/85 sm:order-1 sm:mt-0 sm:text-[18px]">
-            Transforming doctors’ instructions into multilingual, illustrated
-            patient guidance—delivered as a shareable PDF through WhatsApp.
-          </p>
-          <div className="order-1 mt-0 flex flex-row gap-2 sm:order-2 sm:mt-5 sm:flex-row lg:mt-4">
-          <Button
-            size="lg"
-            // className="w-full sm:w-auto h-10 px-4 text-[13px] lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]"
-            className="min-w-0 flex-1 !h-8 !px-1.5 !text-[11px] !gap-1 whitespace-nowrap sm:flex-none sm:w-auto sm:!h-9 sm:!px-3 sm:!text-[12px] lg:!h-10 lg:!px-4 lg:!text-[13px] xl:!h-11 xl:!px-5 xl:!text-[14px]"
-            onClick={() => {
-              button_click({ button_name: "request_demo", section: "hero" });
-              open("enquiry");
-            }}
-          >
-            Request a Demo
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            href="#how-it-works"
-            icon={PlayCircle}
-            onClick={() =>
-              button_click({ button_name: "see_how_it_works", section: "hero" })
-            }
-            trailing={null}
-            // className="w-full sm:w-auto h-10 px-4 text-[13px] lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]"
-            className="min-w-0 flex-1 !h-8 !px-1.5 !text-[11px] !gap-1 whitespace-nowrap sm:flex-none sm:w-auto sm:!h-9 sm:!px-3 sm:!text-[12px] lg:!h-10 lg:!px-4 lg:!text-[13px] xl:!h-11 xl:!px-5 xl:!text-[14px]"
-          >
-            See How It Works
-          </Button>
-        </div>
-          </Reveal>
 
-        <ul className="order-3 mt-7 grid max-w-[34rem] grid-cols-3 gap-3 lg:order-none lg:col-span-2 lg:row-start-3 lg:mt-0 lg:max-w-none">
-            {FEATURES.map((f) => (
-              <li
-                key={f.label}
-                className="card flex flex-col items-center gap-2 px-2 py-4 text-center text-[14px] font-semibold text-ink sm:flex-row sm:px-4 sm:text-left"
-              >
-                <span className="shrink-0">{f.icon}</span>
-                {f.label}
-              </li>
-            ))}
-          </ul>
+      <div className="container-site relative grid gap-x-10 gap-y-5 sm:gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:items-center">
 
+        {/* Heading */}
+        <h1
+          id="hero-title"
+          className="order-0 text-[20px] leading-[1.15] font-extrabold sm:text-[54px] lg:col-start-1 lg:row-start-1 lg:text-[52px] xl:text-[58px]"
+        >
+          Doctor’s Advice,
+          <span className="gradient-text">Made Visual.</span>
+          <br />
+          <span className="relative inline-block">
+            Made Simple.
+            <Swoosh />
+          </span>
+        </h1>
+
+        {/* Product visual */}
         <Reveal
           delay={0.1}
-          className="order-1 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1"
+          className="order-1 lg:col-start-2 lg:row-start-1 lg:row-span-2"
         >
           <ProductVisual />
         </Reveal>
 
-        
+        {/* Description and buttons */}
+        <Reveal className="order-2 flex flex-col lg:col-start-1 lg:row-start-2">
+          {/* Description */}
+          <p className="order-2 mt-5 max-w-[34rem] text-[17px] leading-relaxed text-navy/85 sm:order-1 sm:mt-0 sm:text-[18px]">
+            Transforming doctors’ instructions into multilingual, illustrated
+            patient guidance—delivered as a shareable PDF through WhatsApp.
+          </p>
+
+          {/* Buttons */}
+          <div className="order-1 mt-0 flex flex-row gap-2 sm:order-2 sm:mt-5 sm:flex-row lg:mt-4">
+            <Button
+              size="lg"
+              className="min-w-0 flex-1 !h-8 !px-1.5 !text-[11px] !gap-1 whitespace-nowrap sm:flex-none sm:w-auto sm:!h-9 sm:!px-3 sm:!text-[12px] lg:!h-10 lg:!px-4 lg:!text-[13px] xl:!h-11 xl:!px-5 xl:!text-[14px]"
+              onClick={() => {
+                button_click({
+                  button_name: "request_demo",
+                  section: "hero",
+                });
+                open("enquiry");
+              }}
+            >
+              Request a Demo
+            </Button>
+
+            <Button
+              size="lg"
+              variant="outline"
+              href="#how-it-works"
+              icon={PlayCircle}
+              onClick={() =>
+                button_click({
+                  button_name: "see_how_it_works",
+                  section: "hero",
+                })
+              }
+              trailing={null}
+              className="min-w-0 flex-1 !h-8 !px-1.5 !text-[11px] !gap-1 whitespace-nowrap sm:flex-none sm:w-auto sm:!h-9 sm:!px-3 sm:!text-[12px] lg:!h-10 lg:!px-4 lg:!text-[13px] xl:!h-11 xl:!px-5 xl:!text-[14px]"
+            >
+              See How It Works
+            </Button>
+          </div>
+        </Reveal>
+
+        {/* Feature cards */}
+        <ul className="order-3 mt-2 grid max-w-[34rem] grid-cols-3 gap-3 lg:col-span-2 lg:row-start-3 lg:mt-0 lg:max-w-none">
+          {FEATURES.map((f) => (
+            <li
+              key={f.label}
+              className="card flex flex-col items-center gap-2 px-2 py-4 text-center text-[14px] font-semibold text-ink sm:flex-row sm:px-4 sm:text-left"
+            >
+              <span className="shrink-0">{f.icon}</span>
+              {f.label}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
