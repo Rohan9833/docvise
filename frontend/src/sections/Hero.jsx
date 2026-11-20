@@ -72,7 +72,7 @@ function ProductVisual() {
       />
 
       <Scaled base={600}>
-        <div className="relative h-[440px] sm:h-[520px]">
+        <div className="relative h-[460px] sm:h-[520px]">
           <PhoneFrame
             label="DocVise conversation on WhatsApp ending with the illustrated PDF"
             className="absolute left-9 top-0 z-[-5] w-[238px]"
