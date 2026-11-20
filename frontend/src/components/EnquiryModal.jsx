@@ -30,12 +30,12 @@ export function validate(v) {
 function Field({ id, label, optional, error, children, hint }) {
   return (
     <div>
-      <label htmlFor={id} className="mb-1.5 block text-[14px] font-semibold text-navy">
+      <label htmlFor={id} className="mb-1 block text-[13px] font-semibold text-navy">
         {label} {optional ? <span className="font-normal text-muted">(optional)</span> : <span className="text-[#c2410c]" aria-hidden="true">*</span>}
       </label>
       {children}
-      {hint && !error && <p id={`${id}-hint`} className="mt-1 text-[12.5px] text-muted">{hint}</p>}
-      {error && <p id={`${id}-error`} className="mt-1 flex items-center gap-1 text-[13px] font-medium text-[#b42318]"><AlertCircle className="h-3.5 w-3.5" aria-hidden="true" />{error}</p>}
+      {hint && !error && <p id={`${id}-hint`} className="mt-0.5 text-[12px] text-muted">{hint}</p>}
+      {error && <p id={`${id}-error`} className="mt-0.5 flex items-center gap-1 text-[12px] font-medium text-[#b42318]"><AlertCircle className="h-3.5 w-3.5" aria-hidden="true" />{error}</p>}
     </div>
   );
 }
@@ -87,11 +87,11 @@ export default function EnquiryModal({ onClose, mode = 'demo', isTop }) {
   if (status === 'success') {
     return (
       <Modal isTop={isTop} size="sm" title={title} onClose={onClose}>
-        <div className="py-4 text-center" role="status">
+        <div className="py-2 text-center" role="status">
           <CheckCircle2 className="mx-auto h-14 w-14 text-emerald-500" aria-hidden="true" />
           <h3 className="mt-3 text-[22px] font-bold">Thank you, {values.name.trim().split(' ')[0]}!</h3>
-          <p className="mx-auto mt-2 max-w-sm text-[15px] text-ink/80">Your request has been received. The digiLATERAL team will get in touch with you shortly to schedule a DocVise demo.</p>
-          <Button className="mt-6" onClick={onClose} trailing={null} data-autofocus>Close</Button>
+          <p className="mx-auto mt-1.5 max-w-sm text-[14px] text-ink/80">Your request has been received. The digiLATERAL team will get in touch with you shortly to schedule a DocVise demo.</p>
+          <Button className="mt-4" onClick={onClose} trailing={null} data-autofocus>Close</Button>
         </div>
       </Modal>
     );
@@ -100,13 +100,13 @@ export default function EnquiryModal({ onClose, mode = 'demo', isTop }) {
   return (
     <Modal isTop={isTop} size="md" title={title} description="Tell us a little about you and we'll arrange a walkthrough of DocVise." onClose={onClose}>
       {(site.contactEmail || site.contactPhone) && (
-        <div className="mb-5 flex flex-wrap gap-x-6 gap-y-2 rounded-xl bg-brand-50 px-4 py-3 text-[14px]">
+        <div className="mb-3 flex flex-wrap gap-x-4 gap-y-1.5 rounded-xl bg-brand-50 px-3 py-2 text-[13px]">
           {site.contactEmail && <a className="flex items-center gap-2 font-semibold text-brand-700 hover:underline" href={`mailto:${site.contactEmail}`}><Mail className="h-4 w-4" />{site.contactEmail}</a>}
           {site.contactPhone && <a className="flex items-center gap-2 font-semibold text-brand-700 hover:underline" href={`tel:${site.contactPhone.replace(/\s/g, '')}`}><Phone className="h-4 w-4" />{site.contactPhone}</a>}
         </div>
       )}
-      <form ref={formRef} onSubmit={onSubmit} noValidate className="space-y-4">
-        <div className="grid gap-4 sm:grid-cols-2">
+      <form ref={formRef} onSubmit={onSubmit} noValidate className="space-y-3">
+        <div className="grid gap-3 sm:grid-cols-2">
           <Field id="enq-name" label="Full Name" error={errors.name}>
             <input {...a11y('name')} type="text" autoComplete="name" maxLength={LIMITS.name} value={values.name} onChange={set('name')} className={inputCls(errors.name)} data-autofocus />
           </Field>
