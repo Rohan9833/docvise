@@ -94,7 +94,7 @@ export default function Hero() {
     <section
       id="top"
       aria-labelledby="hero-title"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#fff_0%,#fbf9ff_70%,#f6f2fe_100%)] pb-14 pt-2 sm:pt-10 lg:pb-20 lg:pt-14"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#fff_0%,#fbf9ff_70%,#f6f2fe_100%)] pb-8 pt-2 sm:pt-10 lg:pb-20 lg:pt-14"
     >
       <div
         aria-hidden="true"
