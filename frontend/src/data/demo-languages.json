@@ -1,0 +1,52 @@
+{
+  "instructions": ["Do CBC.", "Do BMD test.", "Do chest X-ray.", "Reduce weight."],
+  "illustrations": ["cbc", "bmd", "xray", "weight"],
+  "illustrationAlt": [
+    "Blood sample tubes for a complete blood count test",
+    "Patient lying on a bone mineral density (BMD) scanner",
+    "Chest X-ray film showing ribs and lungs",
+    "Weighing scale with a measuring tape and a downward arrow"
+  ],
+  "languages": [
+    {
+      "code": "mr", "label": "Marathi", "native": "मराठी", "title": "रुग्णासाठी मार्गदर्शन",
+      "items": [
+        "संपूर्ण रक्तगणना (CBC) तपासणी करून घ्या.",
+        "हाडांची घनता तपासण्यासाठी BMD चाचणी करून घ्या.",
+        "छातीचा एक्स-रे काढून घ्या.",
+        "वजन कमी करा."
+      ],
+      "pdf": "/samples/docvise-sample-marathi.pdf"
+    },
+    {
+      "code": "hi", "label": "Hindi", "native": "हिन्दी", "title": "मरीज़ के लिए मार्गदर्शन",
+      "items": [
+        "पूर्ण रक्त गणना (CBC) जाँच करवाएँ।",
+        "हड्डियों का घनत्व जाँचने के लिए BMD जाँच करवाएँ।",
+        "छाती का एक्स-रे करवाएँ।",
+        "वज़न कम करें।"
+      ],
+      "pdf": "/samples/docvise-sample-hindi.pdf"
+    },
+    {
+      "code": "ta", "label": "Tamil", "native": "தமிழ்", "title": "நோயாளிக்கான வழிகாட்டல்",
+      "items": [
+        "முழு இரத்த எண்ணிக்கை (CBC) பரிசோதனை செய்து கொள்ளுங்கள்.",
+        "எலும்பு அடர்த்தியை அறிய BMD பரிசோதனை செய்து கொள்ளுங்கள்.",
+        "மார்பு எக்ஸ்-ரே எடுத்துக் கொள்ளுங்கள்.",
+        "உடல் எடையைக் குறைக்கவும்."
+      ],
+      "pdf": "/samples/docvise-sample-tamil.pdf"
+    },
+    {
+      "code": "en", "label": "English", "native": "English", "title": "Patient guidance",
+      "items": [
+        "Get a complete blood count (CBC) test done.",
+        "Get a BMD test done to check your bone density.",
+        "Get a chest X-ray done.",
+        "Reduce your weight."
+      ],
+      "pdf": "/samples/docvise-sample-english.pdf"
+    }
+  ]
+}
