@@ -1,12 +1,10 @@
-import { ReactGAImplementation } from "react-ga4";
+import ReactGA from "react-ga4";
 
 // ============================================================
 // Google Analytics 4 Initialization
 // ============================================================
 
-// Use an explicit ReactGAImplementation instance, so the API methods
-// (initialize, send, event) are available consistently.
-export const ReactGA = new ReactGAImplementation();
+export { ReactGA };
 
 let initialized = false;
 
