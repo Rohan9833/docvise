@@ -132,13 +132,13 @@ export default function Hero() {
         {/* Description and buttons */}
         <Reveal className="order-2 flex flex-col lg:col-start-1 lg:row-start-2">
           {/* Description */}
-          <p className="order-2 mt-5 max-w-[34rem] text-[17px] leading-relaxed text-navy/85 sm:order-1 sm:mt-0 sm:text-[18px]">
+          <p className="order-2 mt-5 max-w-[34rem] text-[17px] leading-relaxed text-navy/85 sm:order-2 sm:mt-5 sm:text-[18px]">
             Transforming doctors’ instructions into multilingual, illustrated
             patient guidance—delivered as a shareable PDF through WhatsApp.
           </p>
 
           {/* Buttons */}
-          <div className="order-1 mt-0 flex flex-row gap-2 sm:order-2 sm:mt-5 sm:flex-row lg:mt-4">
+          <div className="order-1 mt-0 flex flex-row gap-2 sm:order-1 sm:mt-5 sm:flex-row lg:mt-4">
             <Button
               size="lg"
               className="min-w-0 flex-1 !h-8 !px-1.5 !text-[11px] !gap-1 whitespace-nowrap sm:flex-none sm:w-auto sm:!h-9 sm:!px-3 sm:!text-[12px] lg:!h-10 lg:!px-4 lg:!text-[13px] xl:!h-11 xl:!px-5 xl:!text-[14px]"
