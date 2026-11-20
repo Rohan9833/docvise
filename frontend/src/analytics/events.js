@@ -12,15 +12,15 @@ import ReactGA from "react-ga4";
  * @param {Record<string, any>} params
  */
 const safeEvent = (eventName, params = {}) => {
-  try {
-    ReactGA.event(eventName, params);
+    try {
+        ReactGA.event(eventName, params);
 
-    if (import.meta.env.DEV) {
-      console.log("GA Event:", eventName, params);
+        if (import.meta.env.DEV) {
+            console.log("GA Event:", eventName, params);
+        }
+    } catch (error) {
+        console.warn("GA event failed:", eventName, error);
     }
-  } catch (error) {
-    console.warn("GA event failed:", eventName, error);
-  }
 };
 
 /**
@@ -29,7 +29,7 @@ const safeEvent = (eventName, params = {}) => {
  * @param {string} location
  */
 const normalizeLocation = (location) =>
-  location || window.location.pathname;
+    location || window.location.pathname;
 
 // ============================================================
 // Page Tracking
@@ -41,20 +41,20 @@ const normalizeLocation = (location) =>
  * @param {string} path
  */
 export const page_view = (path) => {
-  const cleanPath = path?.replace(/\\/+$/, "") || "/";
+    const cleanPath = path?.replace(/\\/ + $ /, "") || "/";
 
-  try {
-    ReactGA.send({
-      hitType: "pageview",
-      page: cleanPath,
-    });
+    try {
+        ReactGA.send({
+            hitType: "pageview",
+            page: cleanPath,
+        });
 
-    if (import.meta.env.DEV) {
-      console.log("GA Page View:", cleanPath);
+        if (import.meta.env.DEV) {
+            console.log("GA Page View:", cleanPath);
+        }
+    } catch (error) {
+        console.warn("GA pageview failed:", cleanPath, error);
     }
-  } catch (error) {
-    console.warn("GA pageview failed:", cleanPath, error);
-  }
 };
 
 // ============================================================
@@ -70,7 +70,7 @@ export const page_view = (path) => {
  * @param {Record<string, any>} params
  */
 export const trackEvent = (eventName, params = {}) => {
-  safeEvent(eventName, params);
+    safeEvent(eventName, params);
 };
 
 // ============================================================
@@ -81,25 +81,25 @@ export const trackEvent = (eventName, params = {}) => {
  * Successful user registration.
  */
 export const sign_up = ({ method = "email" } = {}) => {
-  safeEvent("sign_up", {
-    method,
-  });
+    safeEvent("sign_up", {
+        method,
+    });
 };
 
 /**
  * Successful user login.
  */
 export const login = ({ method = "email" } = {}) => {
-  safeEvent("login", {
-    method,
-  });
+    safeEvent("login", {
+        method,
+    });
 };
 
 /**
  * User logout.
  */
 export const logout = () => {
-  safeEvent("logout", {});
+    safeEvent("logout", {});
 };
 
 // ============================================================
@@ -112,13 +112,13 @@ export const logout = () => {
  * @param {{ menu_item: string, location?: string }} params
  */
 export const navigation_menu_click = ({
-  menu_item,
-  location,
-}) => {
-  safeEvent("navigation_menu_click", {
     menu_item,
-    location: normalizeLocation(location),
-  });
+    location,
+}) => {
+    safeEvent("navigation_menu_click", {
+        menu_item,
+        location: normalizeLocation(location),
+    });
 };
 
 /**
@@ -127,15 +127,15 @@ export const navigation_menu_click = ({
  * @param {{ button_name: string, section?: string, location?: string }} params
  */
 export const button_click = ({
-  button_name,
-  section = "general",
-  location,
-}) => {
-  safeEvent("button_click", {
     button_name,
-    section,
-    location: normalizeLocation(location),
-  });
+    section = "general",
+    location,
+}) => {
+    safeEvent("button_click", {
+        button_name,
+        section,
+        location: normalizeLocation(location),
+    });
 };
 
 // ============================================================
@@ -150,13 +150,13 @@ export const button_click = ({
  * @param {{ file_type?: string, file_size_category?: string }} params
  */
 export const file_upload = ({
-  file_type = "unknown",
-  file_size_category = "unknown",
+    file_type = "unknown",
+    file_size_category = "unknown",
 } = {}) => {
-  safeEvent("file_upload", {
-    file_type,
-    file_size_category,
-  });
+    safeEvent("file_upload", {
+        file_type,
+        file_size_category,
+    });
 };
 
 /**
@@ -165,11 +165,11 @@ export const file_upload = ({
  * @param {{ document_type?: string }} params
  */
 export const document_processing_started = ({
-  document_type = "unknown",
+    document_type = "unknown",
 } = {}) => {
-  safeEvent("document_processing_started", {
-    document_type,
-  });
+    safeEvent("document_processing_started", {
+        document_type,
+    });
 };
 
 /**
@@ -178,13 +178,13 @@ export const document_processing_started = ({
  * @param {{ document_type?: string, processing_time_category?: string }} params
  */
 export const document_processing_completed = ({
-  document_type = "unknown",
-  processing_time_category = "unknown",
+    document_type = "unknown",
+    processing_time_category = "unknown",
 } = {}) => {
-  safeEvent("document_processing_completed", {
-    document_type,
-    processing_time_category,
-  });
+    safeEvent("document_processing_completed", {
+        document_type,
+        processing_time_category,
+    });
 };
 
 /**
@@ -195,13 +195,13 @@ export const document_processing_completed = ({
  * @param {{ document_type?: string, error_type?: string }} params
  */
 export const document_processing_failed = ({
-  document_type = "unknown",
-  error_type = "unknown",
+    document_type = "unknown",
+    error_type = "unknown",
 } = {}) => {
-  safeEvent("document_processing_failed", {
-    document_type,
-    error_type,
-  });
+    safeEvent("document_processing_failed", {
+        document_type,
+        error_type,
+    });
 };
 
 /**
@@ -210,13 +210,13 @@ export const document_processing_failed = ({
  * @param {{ document_type?: string, format?: string }} params
  */
 export const document_download = ({
-  document_type = "unknown",
-  format = "unknown",
+    document_type = "unknown",
+    format = "unknown",
 } = {}) => {
-  safeEvent("document_download", {
-    document_type,
-    format,
-  });
+    safeEvent("document_download", {
+        document_type,
+        format,
+    });
 };
 
 // ============================================================
@@ -229,13 +229,13 @@ export const document_download = ({
  * @param {{ feature_name: string, location?: string }} params
  */
 export const feature_used = ({
-  feature_name,
-  location,
-}) => {
-  safeEvent("feature_used", {
     feature_name,
-    location: normalizeLocation(location),
-  });
+    location,
+}) => {
+    safeEvent("feature_used", {
+        feature_name,
+        location: normalizeLocation(location),
+    });
 };
 
 /**
@@ -246,11 +246,11 @@ export const feature_used = ({
  * @param {{ search_type?: string }} params
  */
 export const search_performed = ({
-  search_type = "general",
+    search_type = "general",
 } = {}) => {
-  safeEvent("search_performed", {
-    search_type,
-  });
+    safeEvent("search_performed", {
+        search_type,
+    });
 };
 
 // ============================================================
@@ -267,19 +267,19 @@ const VISIBILITY_THROTTLE_MS = 2000;
  * @param {"hidden"|"visible"} state
  */
 export const tab_visibility = (state) => {
-  const now = Date.now();
+    const now = Date.now();
 
-  if (now - lastVisibilitySentAt < VISIBILITY_THROTTLE_MS) {
-    return;
-  }
+    if (now - lastVisibilitySentAt < VISIBILITY_THROTTLE_MS) {
+        return;
+    }
 
-  lastVisibilitySentAt = now;
+    lastVisibilitySentAt = now;
 
-  if (state === "hidden") {
-    safeEvent("tab_hidden", {});
-  }
+    if (state === "hidden") {
+        safeEvent("tab_hidden", {});
+    }
 
-  if (state === "visible") {
-    safeEvent("tab_visible", {});
-  }
+    if (state === "visible") {
+        safeEvent("tab_visible", {});
+    }
 };
