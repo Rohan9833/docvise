@@ -4,7 +4,7 @@ import { escapeHtml } from '../utils/sanitize.js';
 let transporterPromise = null;
 
 async function getTransporter() {
-  if (!env.smtp.host || !env.smtp.to || !env.smtp.from) return null;
+  if (!env.smtp.host || !env.smtp.to || !env.smtp.from || !env.smtp.user || !env.smtp.pass) return null;
   if (!transporterPromise) {
     transporterPromise = import('nodemailer').then(({ default: nodemailer }) => nodemailer.createTransport({
       host: env.smtp.host,
@@ -17,8 +17,8 @@ async function getTransporter() {
 }
 
 /**
- * Emails digiLATERAL about a new demo request. Never throws: returns { sent, reason }.
- * Failures are logged without personal data so the enquiry itself is never lost.
+ * Emails digiLATERAL about a new demo request. Returns { sent, reason }; failures are handled by the API.
+ * Failures are logged without personal data.
  */
 export async function notifyNewEnquiry(enquiry) {
   try {
