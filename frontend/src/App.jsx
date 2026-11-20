@@ -1,4 +1,5 @@
 import { lazy, Suspense, useCallback, useMemo, useState, useEffect } from "react";
+import { ShieldCheck } from "lucide-react";
 import { ModalContext } from "./hooks/useModal.js";
 import Header from "./sections/Header.jsx";
 import Hero from "./sections/Hero.jsx";
@@ -14,6 +15,33 @@ import usePageAndVisibilityTracking from "./analytics/usePageAndVisibilityTracki
 const DemoModal = lazy(() => import("./components/DemoModal.jsx"));
 const EnquiryModal = lazy(() => import("./components/EnquiryModal.jsx"));
 const LegalModal = lazy(() => import("./components/LegalModal.jsx"));
+
+function Disclaimer() {
+  return (
+    <section aria-labelledby="disclaimer-heading" className="bg-white py-8 sm:py-10">
+      <div className="container-site">
+        <div className="flex items-start gap-4 rounded-[24px] bg-[#142957] px-5 py-6 text-white sm:gap-5 sm:px-7 sm:py-8 md:rounded-[28px]">
+          <ShieldCheck
+            aria-hidden="true"
+            className="mt-0.5 shrink-0 text-[#E8A414]"
+            size={30}
+          />
+          <div className="min-w-0">
+            <h2
+              id="disclaimer-heading"
+              className="text-sm font-extrabold tracking-[0.12em] text-white"
+            >
+              DISCLAIMER
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-white/90 sm:text-base sm:leading-7">
+              The doctors, names, clinics and people shown here are AI-generated for illustration. Any figures shown are sample data. The health content in the samples is not medically verified and is not medical advice. Please consult a qualified doctor for any health concern. This website and its demonstrations are for illustrative purposes and showcase DocVise services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function App() {
   // Track the current URL, including hash-based section navigation.
@@ -65,6 +93,7 @@ export default function App() {
         <WhyDocVise />
         <AnalyticsAndCta />
       </main>
+      <Disclaimer />
       <Footer />
       <Suspense fallback={null}>
         {stack.map((m, i) => {
