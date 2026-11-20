@@ -1,4 +1,4 @@
-import { lazy, Suspense, useCallback, useMemo, useState } from "react";
+import { lazy, Suspense, useCallback, useMemo, useState, useEffect } from "react";
 import { ModalContext } from "./hooks/useModal.js";
 import Header from "./sections/Header.jsx";
 import Hero from "./sections/Hero.jsx";
@@ -8,6 +8,7 @@ import Multilingual from "./sections/Multilingual.jsx";
 import WhyDocVise from "./sections/WhyDocVise.jsx";
 import AnalyticsAndCta from "./sections/AnalyticsAndCta.jsx";
 import Footer from "./sections/Footer.jsx";
+import usePageAndVisibilityTracking from "./analytics/usePageAndVisibilityTracking.js";
 
 // Modals are code-split: they load only when a visitor opens one.
 const DemoModal = lazy(() => import("./components/DemoModal.jsx"));
@@ -15,6 +16,28 @@ const EnquiryModal = lazy(() => import("./components/EnquiryModal.jsx"));
 const LegalModal = lazy(() => import("./components/LegalModal.jsx"));
 
 export default function App() {
+  // Track the current URL, including hash-based section navigation.
+  const [currentPath, setCurrentPath] = useState(
+    () => window.location.pathname + window.location.search + window.location.hash
+  );
+
+  useEffect(() => {
+    const updatePath = () => {
+      setCurrentPath(window.location.pathname + window.location.search + window.location.hash);
+    };
+
+    window.addEventListener("hashchange", updatePath);
+    window.addEventListener("popstate", updatePath);
+
+    return () => {
+      window.removeEventListener("hashchange", updatePath);
+      window.removeEventListener("popstate", updatePath);
+    };
+  }, []);
+
+  // Track page views and browser-tab visibility.
+  usePageAndVisibilityTracking(currentPath);
+
   // A small stack so a dialog can open another (e.g. Privacy Policy from the enquiry form) without losing input.
   const [stack, setStack] = useState([]);
   const open = useCallback(
