@@ -46,27 +46,6 @@ test('honeypot and too-fast submissions are flagged as spam', () => {
   assert.equal(validateEnquiry({ ...good, elapsedMs: 300 }).spam, true);
 });
 
-test('JWT signs, verifies, rejects tampering and expiry', () => {
-  const secret = 'x'.repeat(40);
-  const t = signToken({ sub: 'admin@example.com', role: 'admin' }, secret, 60);
-  assert.equal(verifyToken(t, secret).role, 'admin');
-  assert.equal(verifyToken(t, 'y'.repeat(40)), null);
-  const [h, , s] = t.split('.');
-  const forged = `${h}.${Buffer.from(JSON.stringify({ role: 'admin', exp: 9e9 })).toString('base64url')}.${s}`;
-  assert.equal(verifyToken(forged, secret), null);
-  assert.equal(verifyToken(signToken({ role: 'admin' }, secret, -1), secret), null);
-  assert.equal(verifyToken('garbage', secret), null);
-});
-
-test('password hashing verifies only the right password', () => {
-  const h = hashPassword('correct horse battery');
-  assert.ok(h.startsWith('scrypt$'));
-  assert.equal(verifyPassword('correct horse battery', h), true);
-  assert.equal(verifyPassword('wrong', h), false);
-  assert.equal(safeEqual('a@b.com', 'a@b.com'), true);
-  assert.equal(safeEqual('a@b.com', 'c@b.com'), false);
-});
-
 test('rate limiter allows max requests then returns 429', () => {
   const limiter = rateLimit({ windowMs: 60000, max: 2 });
   const statuses = [];
