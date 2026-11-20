@@ -113,12 +113,9 @@ export default function Hero() {
           className="order-0 text-[20px] leading-[1.15] font-extrabold sm:text-[54px] lg:col-start-1 lg:row-start-1 lg:text-[52px] xl:text-[58px]"
         >
           Doctor’s Advice,
-          <span className="gradient-text">Made Visual.</span>
+          <span className="relative inline-block gradient-text">Made Visual.<Swoosh /></span>
           <br />
-          <span className="relative inline-block">
-            Made Simple.
-            <Swoosh />
-          </span>
+          <span className="relative inline-block">Made Simple.</span>
         </h1>
 
         {/* Product visual */}
