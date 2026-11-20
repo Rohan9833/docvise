@@ -52,7 +52,7 @@ The `enquiries` collection and its indexes are created automatically on the firs
 | `TRUST_PROXY` | `1` when behind a reverse proxy, so rate limiting sees real client IPs |
 | `ENQUIRY_RATE_WINDOW_MINUTES`, `ENQUIRY_RATE_MAX` | Public form rate limit per IP (default 5 per 15 minutes) |
 | `JWT_SECRET`, `ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH` | Enable the admin API. Generate the hash with `npm run hash-password -- "a-strong-password"` |
-| `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `NOTIFY_FROM`, `NOTIFY_TO` | Optional email notification for each new enquiry. If SMTP isn't set or sending fails, the enquiry is still saved and the failure is logged without personal data. |
+| `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_SECURE`, `EMAIL_USER`, `EMAIL_PASS`, `EMAIL_FROM`, `NOTIFY_TO` | Email notifications; compatible with DocTalk `EMAIL_*` names and legacy `SMTP_*` aliases. Defaults use Hostinger SMTP (`smtp.hostinger.com:465`, secure) and send to `info@digilateral.com`. Put credentials in private `.env`; enquiries are saved even if email fails. |
 
 ### API
 
