@@ -16,7 +16,7 @@ const HIGHLIGHTS = [
 export default function AnalyticsAndCta() {
   const { open } = useModal();
   return (
-    <div className="container-site grid gap-8 pb-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:items-stretch lg:pb-20">
+    <div className="container-site grid gap-8 pb-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] pb-8 lg:items-stretch lg:pb-20">
       <section id="analytics" aria-labelledby="analytics-title" className="scroll-mt-20 lg:py-4">
         <Reveal>
           <SectionHeader num="06" id="analytics-title" eyebrow="Head Office analytics"
