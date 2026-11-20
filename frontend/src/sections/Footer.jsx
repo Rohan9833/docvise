@@ -1,6 +1,8 @@
 import { Logo } from '../components/ui.jsx';
 import { useModal } from '../hooks/useModal.js';
 
+const PRIVACY_URL = 'https://digilateral.com/privacy';
+
 export default function Footer() {
   const { open } = useModal();
   const link = 'min-h-11 px-1 text-[14px] text-ink/80 underline-offset-4 hover:text-brand-600 hover:underline';
@@ -11,7 +13,7 @@ export default function Footer() {
         <p className="text-[14px] text-ink/80">A digiLATERAL offering</p>
         <nav aria-label="Legal and contact">
           <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
-            <li><button type="button" className={link} onClick={() => open('privacy')}>Privacy Policy</button></li>
+            <li><a href={PRIVACY_URL} className={link}>Privacy Policy</a></li>
             <li aria-hidden="true" className="hidden text-line sm:block">|</li>
             <li><button type="button" className={link} onClick={() => open('terms')}>Terms &amp; Conditions</button></li>
             <li aria-hidden="true" className="hidden text-line sm:block">|</li>
