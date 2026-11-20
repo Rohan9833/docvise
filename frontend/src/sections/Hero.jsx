@@ -107,11 +107,11 @@ export default function Hero() {
           </h1>
           
         <Reveal className="order-2 lg:order-none lg:col-start-1 lg:row-start-1">
-          <div className="order-3 flex flex-row gap-3 sm:flex-row lg:order-none lg:-mt-2">
+          <div className="order-3 flex flex-row gap-2 sm:flex-row lg:order-none lg:-mt-2">
           <Button
             size="lg"
             // className="w-full sm:w-auto h-10 px-4 text-[13px] lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]"
-            className="min-w-0 flex-1 h-8 px-1.5 text-[11px] whitespace-nowrap sm:flex-none sm:w-auto sm:h-9 sm:px-3 sm:text-[12px] lg:h-10 lg:px-4 lg:text-[13px] xl:h-11 xl:px-5 xl:text-[14px]"
+            className="min-w-0 flex-1 !h-8 !px-1.5 !text-[11px] !gap-1 whitespace-nowrap sm:flex-none sm:w-auto sm:!h-9 sm:!px-3 sm:!text-[12px] lg:!h-10 lg:!px-4 lg:!text-[13px] xl:!h-11 xl:!px-5 xl:!text-[14px]"
             onClick={() => {
               button_click({ button_name: "request_demo", section: "hero" });
               open("enquiry");
@@ -129,7 +129,7 @@ export default function Hero() {
             }
             trailing={null}
             // className="w-full sm:w-auto h-10 px-4 text-[13px] lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]"
-            className="min-w-0 flex-1 h-8 px-1.5 text-[11px] whitespace-nowrap sm:flex-none sm:w-auto sm:h-9 sm:px-3 sm:text-[12px] lg:h-10 lg:px-4 lg:text-[13px] xl:h-11 xl:px-5 xl:text-[14px]"
+            className="min-w-0 flex-1 !h-8 !px-1.5 !text-[11px] !gap-1 whitespace-nowrap sm:flex-none sm:w-auto sm:!h-9 sm:!px-3 sm:!text-[12px] lg:!h-10 lg:!px-4 lg:!text-[13px] xl:!h-11 xl:!px-5 xl:!text-[14px]"
           >
             See How It Works
           </Button>
