@@ -72,7 +72,7 @@ function ProductVisual() {
       />
 
       <Scaled base={600}>
-        <div className="relative h-[520px]">
+        <div className="relative h-[440px] sm:h-[520px]">
           <PhoneFrame
             label="DocVise conversation on WhatsApp ending with the illustrated PDF"
             className="absolute left-9 top-0 z-[-5] w-[238px]"
@@ -105,7 +105,7 @@ export default function Hero() {
         className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand-100/60 blur-3xl"
       />
 
-      <div className="container-site relative grid gap-x-10 gap-y-5 sm:gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:items-center">
+      <div className="container-site relative grid gap-x-10 gap-y-2 sm:gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:items-center">
 
         {/* Heading */}
         <h1
