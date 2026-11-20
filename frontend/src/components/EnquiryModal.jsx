@@ -3,7 +3,6 @@ import { CheckCircle2, AlertCircle, Loader2, Send, Mail, Phone } from 'lucide-re
 import Modal from './Modal.jsx';
 import { Button, cx } from './ui.jsx';
 import { submitEnquiry } from '../services/api.js';
-import { useModal } from '../hooks/useModal.js';
 import { site } from '../data/site.js';
 
 const LIMITS = { name: 80, company: 120, designation: 80, email: 120, phone: 20, message: 1000 };
@@ -47,7 +46,6 @@ const inputCls = (err) => cx(
 );
 
 export default function EnquiryModal({ onClose, mode = 'demo', isTop }) {
-  const { open } = useModal();
   const [values, setValues] = useState(EMPTY);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
@@ -143,7 +141,7 @@ export default function EnquiryModal({ onClose, mode = 'demo', isTop }) {
 
         <p className="text-[13px] leading-relaxed text-muted">
           By submitting, you agree that digiLATERAL may contact you about DocVise, as described in our{' '}
-          <button type="button" className="font-semibold text-brand-700 underline underline-offset-2" onClick={() => open('privacy')}>Privacy Policy</button>.
+          <a href="https://digilateral.com/privacy" className="font-semibold text-brand-700 underline underline-offset-2">Privacy Policy</a>.
         </p>
 
         <Button type="submit" size="lg" className="w-full" disabled={status === 'submitting'} icon={status === 'submitting' ? Loader2 : Send} trailing={null}
