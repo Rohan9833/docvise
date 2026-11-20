@@ -60,7 +60,7 @@ export default function Modal({ title, description, onClose, children, size = 'm
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.22, ease: 'easeOut' }}
       >
-        <div className="flex items-start justify-between gap-4 border-b border-line px-5 py-4 sm:px-7">
+        <div className="flex items-start justify-between gap-4 border-b border-line px-4 py-3 sm:px-6 sm:py-3">
           <div>
             <h2 id={titleId} className="text-[20px] font-bold sm:text-[22px]">{title}</h2>
             {description && <p id={descId} className="mt-0.5 text-[14px] text-muted">{description}</p>}
@@ -69,7 +69,7 @@ export default function Modal({ title, description, onClose, children, size = 'm
             <X className="h-5 w-5" />
           </button>
         </div>
-        <div className="overflow-y-auto px-5 py-5 sm:px-7 sm:py-6">{children}</div>
+        <div className="overflow-y-auto px-4 py-3 sm:px-6 sm:py-4">{children}</div>
       </motion.div>
     </div>,
     document.body,
