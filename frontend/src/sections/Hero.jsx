@@ -47,8 +47,8 @@ export default function Hero() {
     <section id="top" aria-labelledby="hero-title" className="relative overflow-hidden bg-[linear-gradient(180deg,#fff_0%,#fbf9ff_70%,#f6f2fe_100%)] pb-14 pt-8 sm:pt-10 lg:pb-20 lg:pt-14">
       <div aria-hidden="true" className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand-100/60 blur-3xl" />
       <div className="container-site relative grid gap-x-10 gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:items-center">
-        <Reveal className="lg:col-start-1 lg:row-start-1">
-          <h1 id="hero-title" className="text-[40px] leading-[1.06] font-extrabold xs:text-[44px] sm:text-[54px] lg:text-[52px] xl:text-[58px]">
+        <Reveal className="order-2 lg:order-none lg:col-start-1 lg:row-start-1">
+          <h1 id="hero-title" className="text-[20px] leading-[1.15] font-extrabold sm:text-[54px] lg:text-[52px] xl:text-[58px]">
             Doctor’s Advice,<span className="gradient-text">Made Visual.</span> <br />
             <span className="relative inline-block">Made Simple.<Swoosh /></span>
           </h1>
@@ -64,11 +64,11 @@ export default function Hero() {
           </ul>
         </Reveal>
 
-        <Reveal delay={0.1} className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
+        <Reveal delay={0.1} className="order-1 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
           <ProductVisual />
         </Reveal>
 
-        <div className="flex flex-col gap-3 sm:flex-row lg:col-start-1 lg:row-start-2 lg:-mt-2">
+        <div className="order-3 flex flex-col gap-3 sm:flex-row lg:order-none lg:col-start-1 lg:row-start-2 lg:-mt-2">
           <Button size="lg" className="w-full sm:w-auto lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]" onClick={() => { button_click({ button_name: 'request_demo', section: 'hero' }); open('enquiry'); }}>Request a Demo</Button>
           <Button size="lg" variant="outline" href="#how-it-works" icon={PlayCircle} onClick={() => button_click({ button_name: "see_how_it_works", section: "hero" })} trailing={null} className="w-full sm:w-auto lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]">See How It Works</Button>
         </div>
