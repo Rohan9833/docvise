@@ -111,7 +111,7 @@ export default function Hero() {
           <Button
             size="lg"
             // className="w-full sm:w-auto h-10 px-4 text-[13px] lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]"
-            className="w-full h-8 px-2.5 text-[12px] sm:w-auto sm:h-14 sm:px-7 sm:text-[17px] lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]"
+            className="w-full h-8 px-2.5 text-[12px] sm:w-auto sm:h-9 sm:px-3 sm:text-[12px] lg:h-10 lg:px-4 lg:text-[13px] xl:h-11 xl:px-5 xl:text-[14px]"
             onClick={() => {
               button_click({ button_name: "request_demo", section: "hero" });
               open("enquiry");
@@ -129,7 +129,7 @@ export default function Hero() {
             }
             trailing={null}
             // className="w-full sm:w-auto h-10 px-4 text-[13px] lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]"
-            className="w-full h-8 px-2.5 text-[12px] sm:w-auto sm:h-14 sm:px-7 sm:text-[17px] lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]"
+            className="w-full h-8 px-2.5 text-[12px] sm:w-auto sm:h-9 sm:px-3 sm:text-[12px] lg:h-10 lg:px-4 lg:text-[13px] xl:h-11 xl:px-5 xl:text-[14px]"
           >
             See How It Works
           </Button>
