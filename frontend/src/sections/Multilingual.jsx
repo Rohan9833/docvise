@@ -47,18 +47,7 @@ export default function Multilingual() {
               title={<>The Doctor Advises in English.<br className="hidden sm:inline" /> The Patient Understands in Their Language.</>}
               sub="One instruction. Multiple languages. The same visual clarity." />
           </Reveal>
-          <div className={cx('flex items-center gap-3', !scrollable && 'invisible')} aria-hidden={!scrollable}>
-            <div className="flex gap-1.5" role="tablist" aria-label="Language examples">
-              {CARDS.map((c, i) => (
-                <button key={c.code} type="button" role="tab" aria-selected={state.index === i} aria-label={`Show example ${i + 1}`} tabIndex={scrollable ? 0 : -1}
-                  onClick={() => scrollTo(i)} className={cx('h-2.5 rounded-full transition-all', state.index === i ? 'w-6 bg-brand-500' : 'w-2.5 bg-brand-200')} />
-              ))}
-            </div>
-            <button type="button" aria-label="Previous example" disabled={!state.canPrev} tabIndex={scrollable ? 0 : -1} onClick={() => scrollTo(state.index - 1)}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white text-navy shadow-card disabled:opacity-40"><ChevronLeft className="h-5 w-5" /></button>
-            <button type="button" aria-label="Next example" disabled={!state.canNext} tabIndex={scrollable ? 0 : -1} onClick={() => scrollTo(state.index + 1)}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-brand-600 text-white shadow-card disabled:opacity-40"><ChevronRight className="h-5 w-5" /></button>
-          </div>
+
         </div>
 
         <ul ref={track} onScroll={measure} className="no-scrollbar -mx-5 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-5 px-5 pb-2 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
@@ -72,6 +61,18 @@ export default function Multilingual() {
             </li>
           ))}
         </ul>
+        <div className={cx('mx-auto mt-4 flex items-center justify-center gap-3', !scrollable && 'invisible')} aria-hidden={!scrollable}>
+          <div className="flex gap-1.5" role="tablist" aria-label="Language examples">
+            {CARDS.map((c, i) => (
+              <button key={c.code} type="button" role="tab" aria-selected={state.index === i} aria-label={`Show example ${i + 1}`} tabIndex={scrollable ? 0 : -1}
+                onClick={() => scrollTo(i)} className={cx('h-2.5 rounded-full transition-all', state.index === i ? 'w-6 bg-brand-500' : 'w-2.5 bg-brand-200')} />
+            ))}
+          </div>
+          <button type="button" aria-label="Previous example" disabled={!state.canPrev} tabIndex={scrollable ? 0 : -1} onClick={() => scrollTo(state.index - 1)}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white text-navy shadow-card disabled:opacity-40"><ChevronLeft className="h-5 w-5" /></button>
+          <button type="button" aria-label="Next example" disabled={!state.canNext} tabIndex={scrollable ? 0 : -1} onClick={() => scrollTo(state.index + 1)}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-brand-600 text-white shadow-card disabled:opacity-40"><ChevronRight className="h-5 w-5" /></button>
+        </div>
         <p className="mt-3 text-[13px] text-muted">Examples shown. DocVise supports multiple Indian languages.</p>
       </div>
     </section>
