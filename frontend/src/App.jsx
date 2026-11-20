@@ -20,7 +20,7 @@ function Disclaimer() {
   return (
     <section aria-labelledby="disclaimer-heading" className="bg-white py-8 sm:py-10">
       <div className="container-site">
-        <div className="flex items-start gap-4 rounded-[24px] bg-gradient-to-r from-brand-700 to-brand-500 px-5 py-6 text-white sm:gap-5 sm:px-7 sm:py-8 md:rounded-[28px]">
+        <div className="flex items-start gap-4 rounded-[24px] bg-brand-700 px-5 py-6 text-white sm:gap-5 sm:px-7 sm:py-8 md:rounded-[28px]">
           <ShieldCheck
             aria-hidden="true"
             className="mt-0.5 shrink-0 text-[#E8A414]"
