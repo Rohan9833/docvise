@@ -117,7 +117,7 @@ export function HeroChat() {
         <Bubble time="10:32">
           <span className="flex items-center gap-2 rounded-md bg-[#f5f6f6] p-1.5">
             <PdfIcon className="h-7 w-7 shrink-0" />
-            <span className="leading-tight"><b className="block text-[10.5px]">Patient_Guide_Marathi.pdf</b><span className="text-[9px] text-[#667781]">1 page · PDF</span></span>
+            <span className="leading-tight"><b className="block text-[8.5px]">Patient_Guide_Marathi.pdf</b><span className="text-[9px] text-[#667781]">1 page · PDF</span></span>
           </span>
         </Bubble>
       </div>
