@@ -1,4 +1,4 @@
-import ReactGA from "react";
+import { ReactGA } from "./ga.js";
 
 // ============================================================
 // DocVise GA4 Event Tracker
