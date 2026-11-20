@@ -3,7 +3,6 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { cleanLine, cleanMultiline, escapeHtml, escapeRegex } from '../src/utils/sanitize.js';
 import { validateEnquiry } from '../src/utils/validateEnquiry.js';
-import { signToken, verifyToken, hashPassword, verifyPassword, safeEqual } from '../src/utils/auth.js';
 import { rateLimit } from '../src/middleware/rateLimit.js';
 
 const good = { name: 'Priya Sharma', company: 'Acme Pharma Ltd', designation: 'Brand Manager', email: 'Priya@AcmePharma.com', phone: '+91 98765 43210', message: 'Interested in a demo.', elapsedMs: 9000 };
