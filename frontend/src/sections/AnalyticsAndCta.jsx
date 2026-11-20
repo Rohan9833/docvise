@@ -3,6 +3,7 @@ import { SectionHeader, Reveal, Button, WhatsAppIcon } from '../components/ui.js
 import DashboardPreview from '../components/DashboardPreview.jsx';
 import { PhoneFrame, HeroChat, TentCard, Scaled } from '../components/Mockups.jsx';
 import { useModal } from '../hooks/useModal.js';
+import { button_click } from '../analytics/events.js';
 
 const HIGHLIGHTS = [
   { icon: <QrCode className="h-7 w-7 text-navy" strokeWidth={1.7} />, text: 'Doctor-wise QR scans & activity' },
@@ -42,7 +43,7 @@ export default function AnalyticsAndCta() {
               <SectionHeader id="cta-title" eyebrow="Bring DocVise to your brand"
                 title="Your Brand. Your Doctors. Smarter Patient Education." titleClass="!text-[26px] xl:!text-[27px]" />
               <p className="mt-3 text-[16px] leading-relaxed text-ink/80">Bring multilingual visual patient education into everyday doctor interactions with DocVise.</p>
-              <Button size="lg" className="mt-6 w-full sm:w-auto" onClick={() => open('enquiry')}>Request a Demo</Button>
+              <Button size="lg" className="mt-6 w-full sm:w-auto" onClick={() => { button_click({ button_name: 'request_demo', section: 'contact_cta' }); open('enquiry'); }}>Request a Demo</Button>
             </div>
             <Scaled base={500} className="order-1 mx-auto max-w-[280px] sm:order-2 lg:max-w-[320px] xl:max-w-none" label="DocVise on WhatsApp beside a QR tent card for the doctor's clinic, with space for the supporting brand">
               <div className="relative h-[520px]">
