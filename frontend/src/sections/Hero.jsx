@@ -2,6 +2,7 @@ import { Languages, PlayCircle } from 'lucide-react';
 import { Button, Reveal, WhatsAppIcon, PdfIcon } from '../components/ui.jsx';
 import { PhoneFrame, HeroChat, PdfList, Scaled } from '../components/Mockups.jsx';
 import { useModal } from '../hooks/useModal.js';
+import { button_click } from '../analytics/events.js';
 
 const MARATHI = { code: 'mr', native: 'मराठी' };
 const ROWS = [
@@ -68,8 +69,8 @@ export default function Hero() {
         </Reveal>
 
         <div className="flex flex-col gap-3 sm:flex-row lg:col-start-1 lg:row-start-2 lg:-mt-2">
-          <Button size="lg" className="w-full sm:w-auto lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]" onClick={() => open('enquiry')}>Request a Demo</Button>
-          <Button size="lg" variant="outline" href="#how-it-works" icon={PlayCircle} trailing={null} className="w-full sm:w-auto lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]">See How It Works</Button>
+          <Button size="lg" className="w-full sm:w-auto lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]" onClick={() => { button_click({ button_name: 'request_demo', section: 'hero' }); open('enquiry'); }}>Request a Demo</Button>
+          <Button size="lg" variant="outline" href="#how-it-works" icon={PlayCircle} onClick={() => button_click({ button_name: "see_how_it_works", section: "hero" })} trailing={null} className="w-full sm:w-auto lg:h-12 lg:px-5 lg:text-[15px] xl:h-14 xl:px-7 xl:text-[17px]">See How It Works</Button>
         </div>
       </div>
     </section>
