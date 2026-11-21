@@ -13,12 +13,12 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#0d1d3b] text-white">
-      <div className="container-site flex flex-col items-center gap-3 px-5 py-8 text-center sm:gap-6 sm:py-10 lg:py-6">
-        <p className="text-[12px] text-white/75 sm:text-sm">
+      <div className="container-site flex flex-col items-center gap-3 px-5 py-8 text-center sm:gap-6 sm:py-10 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-6 lg:py-6 lg:text-left">
+        <p className="text-[12px] text-white/75 sm:text-sm lg:text-left">
           DocVise · Multilingual Patient Guidance · Illustrated PDFs
         </p>
 
-        <nav aria-label="Footer navigation">
+        <nav aria-label="Footer navigation" className="lg:justify-self-center">
           <ul className="flex flex-nowrap items-center justify-center gap-x-3 whitespace-nowrap text-[11px] font-semibold sm:gap-x-8 sm:text-base">
             {FOOTER_LINKS.map((link) => (
               <li key={link.label}>
@@ -59,7 +59,7 @@ export default function Footer() {
           </ul>
         </nav>
 
-        <p className="border-t border-white/15 pt-4 text-sm text-white/60 sm:pt-5 sm:text-base">
+        <p className="border-t border-white/15 pt-4 text-sm text-white/60 sm:pt-5 sm:text-base lg:border-t-0 lg:pt-0 lg:text-right">
           © {new Date().getFullYear()} DocVise. A digiLATERAL offering.
         </p>
       </div>
