@@ -111,13 +111,13 @@ export default function Hero() {
           id="hero-title"
           className="order-0 text-[20px] leading-[1.5] font-extrabold sm:text-[54px] lg:col-start-1 lg:row-start-1 lg:text-[52px] xl:text-[58px]"
         >
-          Doctor’s Advice, 
-          <span className="relative inline-block gradient-text">
-             &nbsp;Made Visual,
+          Doctor’s Advice,
+          <span className="relative inline-block gradient-text ml-[2px]">
+            Made Visual,
             <Swoosh />
           </span>
           <br />
-          <span className="relative inline-block gradient-text">
+          <span className="relative inline-block gradient-text mt-[4px]">
             मेड़ लोकल.
           </span>
         </h1>

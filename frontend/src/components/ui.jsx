@@ -51,9 +51,10 @@ export function SectionHeader({ num, eyebrow, title, sub, id, className, titleCl
   return (
     <div className={cx('flex gap-5', className)}>
       {num && (
-        <span aria-hidden="true" className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brand-200 bg-brand-50 font-display text-[17px] font-bold text-navy md:flex">
-          {num}
-        </span>
+        // <span aria-hidden="true" className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brand-200 bg-brand-50 font-display text-[17px] font-bold text-navy md:flex">
+          
+        // </span>
+        <></>
       )}
       <div>
         <p className="eyebrow">{eyebrow}</p>
