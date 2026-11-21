@@ -11,7 +11,7 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" aria-labelledby="how-title" className="scroll-mt-20 py-8 lg:py-20">
+    <section id="how-it-works" aria-labelledby="how-title" className="scroll-mt-20 py-8 lg:py-10">
       <div className="container-site">
         <Reveal>
           <SectionHeader num="02" id="how-title" eyebrow="How DocVise works"
