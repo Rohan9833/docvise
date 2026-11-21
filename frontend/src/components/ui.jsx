@@ -11,7 +11,7 @@ export function Logo({ className = 'h-10 w-auto', eager = false }) {
       <source srcSet="/assets/docvise-logo.webp" type="image/webp" />
       <img
         src="/assets/docvise-logo.png"
-        alt="DocVise – Doctor's Advice. Made Visual. # मेड़ लोकल."
+        alt="DocVise – Doctor's Advice. Made Visual. Made Simple."
         width="800"
         height="233"
         className={className}
