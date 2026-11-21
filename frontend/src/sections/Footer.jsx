@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#0d1d3b] text-white">
-      <div className="container-site flex flex-col items-center gap-3 px-5 py-8 text-center sm:gap-6 sm:py-10">
+      <div className="container-site flex flex-col items-center gap-3 px-5 py-8 text-center sm:gap-6 sm:py-10 lg:py-6">
         <p className="text-[12px] text-white/75 sm:text-sm">
           DocVise · Multilingual Patient Guidance · Illustrated PDFs
         </p>
