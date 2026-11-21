@@ -48,7 +48,7 @@ function Swoosh() {
   return (
     <svg
       viewBox="0 0 220 18"
-      className="absolute -bottom-3 left-0 h-[0.32em] w-[105%]"
+      className="absolute -bottom-2 left-0 h-[0.32em] w-[105%]"
       preserveAspectRatio="none"
       aria-hidden="true"
     >
@@ -106,16 +106,20 @@ export default function Hero() {
       />
 
       <div className="container-site relative grid gap-x-10 gap-y-2 sm:gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:items-center">
-
         {/* Heading */}
         <h1
           id="hero-title"
-          className="order-0 text-[20px] leading-[1.15] font-extrabold sm:text-[54px] lg:col-start-1 lg:row-start-1 lg:text-[52px] xl:text-[58px]"
+          className="order-0 text-[20px] leading-[1.5] font-extrabold sm:text-[54px] lg:col-start-1 lg:row-start-1 lg:text-[52px] xl:text-[58px]"
         >
-          Doctor’s Advice,
-          <span className="relative inline-block gradient-text">Made Visual.<Swoosh /></span>
+          Doctor’s Advice, 
+          <span className="relative inline-block gradient-text">
+             &nbsp;Made Visual,
+            <Swoosh />
+          </span>
           <br />
-          <span className="relative inline-block">Made Simple.</span>
+          <span className="relative inline-block gradient-text">
+            मेड़ लोकल.
+          </span>
         </h1>
 
         {/* Product visual */}

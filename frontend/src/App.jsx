@@ -1,4 +1,11 @@
-import { lazy, Suspense, useCallback, useMemo, useState, useEffect } from "react";
+import {
+  lazy,
+  Suspense,
+  useCallback,
+  useMemo,
+  useState,
+  useEffect,
+} from "react";
 import { ShieldCheck } from "lucide-react";
 import { ModalContext } from "./hooks/useModal.js";
 import Header from "./sections/Header.jsx";
@@ -18,7 +25,10 @@ const LegalModal = lazy(() => import("./components/LegalModal.jsx"));
 
 function Disclaimer() {
   return (
-    <section aria-labelledby="disclaimer-heading" className="bg-white py-8 sm:py-10">
+    <section
+      aria-labelledby="disclaimer-heading"
+      className="bg-white py-4 sm:py-10"
+    >
       <div className="container-site">
         <div className="flex items-start gap-4 rounded-[24px] bg-brand-700 px-5 py-6 text-white sm:gap-5 sm:px-7 sm:py-8 md:rounded-[28px]">
           <ShieldCheck
@@ -33,8 +43,15 @@ function Disclaimer() {
             >
               DISCLAIMER
             </h2>
-            <p className="mt-2 text-sm leading-6 text-white/90 sm:text-base sm:leading-7">
-              The doctors, names, clinics and people shown here are AI-generated for illustration. Any figures shown are sample data. The health content in the samples is not medically verified and is not medical advice. Please consult a qualified doctor for any health concern. This website and its demonstrations are for illustrative purposes and showcase DocVise services.
+            <p className="mt-2 text-[10px] leading-3 text-white/90 sm:text-base sm:leading-7">
+              DocVise is an AI-powered patient-education tool that converts
+              doctor-provided instructions into visual and multilingual content.
+              AI-generated illustrations and translations may contain
+              inaccuracies. Healthcare professionals are responsible for
+              reviewing and approving the content before sharing it with
+              patients. DocVise does not replace professional medical judgement,
+              diagnosis or treatment.
+              {/* The doctors, names, clinics and people shown here are AI-generated for illustration. Any figures shown are sample data. The health content in the samples is not medically verified and is not medical advice. Please consult a qualified doctor for any health concern. This website and its demonstrations are for illustrative purposes and showcase DocVise services. */}
             </p>
           </div>
         </div>
@@ -46,12 +63,17 @@ function Disclaimer() {
 export default function App() {
   // Track the current URL, including hash-based section navigation.
   const [currentPath, setCurrentPath] = useState(
-    () => window.location.pathname + window.location.search + window.location.hash
+    () =>
+      window.location.pathname + window.location.search + window.location.hash,
   );
 
   useEffect(() => {
     const updatePath = () => {
-      setCurrentPath(window.location.pathname + window.location.search + window.location.hash);
+      setCurrentPath(
+        window.location.pathname +
+          window.location.search +
+          window.location.hash,
+      );
     };
 
     window.addEventListener("hashchange", updatePath);

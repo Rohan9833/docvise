@@ -41,11 +41,11 @@ export default function DemoModal({ onClose, isTop }) {
               ))}
             </div>
           </fieldset>
-
+{/* 
           <div className="flex flex-col gap-1.5 sm:flex-row lg:flex-col">
             <Button href={lang.pdf} download className="w-full" icon={Download} trailing={null}>Download sample PDF</Button>
             <Button href={lang.pdf} variant="outline" target="_blank" rel="noopener" className="w-full" icon={ExternalLink} trailing={null}>Open PDF in new tab</Button>
-          </div>
+          </div> */}
         </div>
 
         <div>

@@ -8,7 +8,7 @@ export { cx };
 export function Logo({ className = 'h-10 w-auto', eager = false }) {
   return (
     <picture>
-      <source srcSet="/assets/docvise-logo.webp" type="image/webp" />
+      <source srcSet="/assets/docvise-logo.png" type="image/webp" />
       <img
         src="/assets/docvise-logo.png"
         alt="DocVise – Doctor's Advice. Made Visual. Made Simple."

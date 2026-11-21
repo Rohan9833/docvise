@@ -226,12 +226,12 @@ export function ProcessingCard({ className }) {
 export function TentCard({ className }) {
   return (
     <div className={className || 'relative'} role="img" aria-label="DocVise QR tent card for the doctor's clinic, with space for the supporting brand">
-      <div className="absolute inset-x-[10%] bottom-0 top-[3%] bg-[#e4e9f2] [clip-path:polygon(12%_0,88%_0,100%_100%,0_100%)]" aria-hidden="true" />
-      <div className="relative flex h-full flex-col items-center bg-white px-[14%] pt-[8%] pb-[6%] text-center shadow-card [clip-path:polygon(9%_0,91%_0,100%_100%,0_100%)]" aria-hidden="true">
+      <div className="absolute inset-x-[10%] bottom-0 top-[3%]  [clip-path:polygon(12%_0,88%_0,100%_100%,0_100%)]" aria-hidden="true" />
+      <div className="relative flex h-[84%] flex-col items-center bg-white px-[14%] pt-[8%] pb-[6%] text-center shadow-card [clip-path:polygon(9%_0,91%_0,100%_100%,0_100%)]" aria-hidden="true">
         <Logo className="h-auto w-[78%]" />
         <img src="/assets/qr-pattern.svg" alt="" className="mt-[6%] h-auto w-[62%]" width="100" height="100" />
         <p className="mt-[5%] text-[12px] font-bold leading-tight text-navy">Scan for<br />Patient Guidance</p>
-        <span className="mt-auto rounded-md border border-dashed border-orange bg-[#fff7ec] px-2 py-0.5 text-[10px] font-extrabold text-[#b45309]">YOUR BRAND</span>
+        <span className="mt-auto rounded-md border border-dashed border-orange bg-[#fff7ec] px-2 py-0.5 text-[21px] font-extrabold text-[#b45309]">YOUR BRAND</span>
       </div>
     </div>
   );
