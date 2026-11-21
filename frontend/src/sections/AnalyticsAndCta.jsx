@@ -68,10 +68,10 @@ export default function AnalyticsAndCta() {
             titleClass="lg:text-[30px]"
           />
         </Reveal>
-        <Reveal delay={0.05} className="mt-7 lg:hidden">
+        <Reveal delay={0.05} className="mt-7">
           <DashboardPreview />
         </Reveal>
-        <ul className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-5 xl:gap-2.5">
+        <ul className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-3 xl:gap-3">
           {/* {HIGHLIGHTS.map((h, i) => (
             <Reveal
               as="li"
