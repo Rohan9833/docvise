@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255">
-  <image href="/assets/docvise-logo.png" x="0" y="0" width="800" height="255" preserveAspectRatio="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 190 255">
+  <image href="/assets/docvise-logo.png" x="0" y="0" width="800" height="255" />
 </svg>
