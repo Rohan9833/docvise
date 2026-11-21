@@ -13,15 +13,15 @@ export default function InAction() {
     <section id="in-action" aria-labelledby="action-title" className="scroll-mt-20 py-4 lg:py-4">
       <div className="container-site">
         <div className="rounded-[2rem] border border-line bg-[linear-gradient(135deg,#f6f2fe_0%,#f9f7ff_55%,#eef4ff_100%)] px-4 py-8 sm:px-8 sm:py-10 lg:px-10">
-          <div className="grid gap-8 xl:grid-cols-[minmax(0,330px)_1fr] xl:items-center">
-            <Reveal>
+          <div className="grid gap-8 xl:grid-cols-[minmax(0,390px)_minmax(0,1fr)] xl:items-center">
+            <Reveal className="relative z-10 min-w-0">
               <SectionHeader num="03" id="action-title" eyebrow="See DocVise in action"
                 title={<>From Instructions to Illustrations.<br className="hidden sm:inline" /> On WhatsApp.</>}
                 sub="Example: the doctor types four instructions and selects Marathi." titleClass="xl:text-[27px]" />
               <div className="mt-7 hidden xl:block"><Button variant="outline" onClick={() => open('demo')}>Try the Interactive Demo</Button></div>
             </Reveal>
 
-            <Reveal delay={0.1}>
+            <Reveal delay={0.1} className="relative z-0 min-w-0">
               {/* Desktop and mobile use the same phone → PDF flow. */}
               <Scaled base={680} className="mx-auto hidden max-w-[680px] md:block">
                 <div className="flex items-center gap-3">
