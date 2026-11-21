@@ -56,22 +56,24 @@ export default function AnalyticsAndCta() {
       <section
         id="analytics"
         aria-labelledby="analytics-title"
-        className="scroll-mt-20 lg:py-4"
+        className="scroll-mt-20 lg:py-4 lg:grid lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.85fr)] lg:items-center lg:gap-8"
       >
-        <Reveal>
-          <SectionHeader
-            num="06"
-            id="analytics-title"
-            eyebrow="Head Office analytics"
-            title="From Doctor Engagement to Actionable Insights."
-            sub="Get visibility into adoption, usage and performance across your field force."
-            titleClass="lg:text-[30px]"
-          />
-        </Reveal>
-        <Reveal delay={0.05} className="mt-7">
-          <DashboardPreview />
-        </Reveal>
-        <ul className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-3 xl:gap-3">
+        <div className="min-w-0">
+          <Reveal>
+            <SectionHeader
+              num="06"
+              id="analytics-title"
+              eyebrow="Head Office analytics"
+              title="From Doctor Engagement to Actionable Insights."
+              sub="Get visibility into adoption, usage and performance across your field force."
+              titleClass="lg:text-[30px]"
+            />
+          </Reveal>
+          <Reveal delay={0.05} className="mt-7">
+            <DashboardPreview />
+          </Reveal>
+        </div>
+        <ul className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-3 xl:gap-3 lg:mt-0 lg:grid-cols-2 lg:gap-4 lg:content-center">
           {/* {HIGHLIGHTS.map((h, i) => (
             <Reveal
               as="li"
@@ -90,7 +92,7 @@ export default function AnalyticsAndCta() {
               as="li"
               key={i}
               delay={i * 0.05}
-              className={`card flex items-center gap-2 px-2 py-4 text-center ${
+              className={`card flex items-center gap-2 px-2 py-4 text-center lg:aspect-square lg:justify-center lg:px-3 lg:py-4 ${
                 i === HIGHLIGHTS.length - 1
                   ? "col-span-2 flex-row justify-center sm:col-span-1 sm:flex-col"
                   : "flex-col"
