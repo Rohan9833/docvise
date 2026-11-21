@@ -16,7 +16,7 @@ export default function InAction() {
           <div className="grid gap-8 xl:grid-cols-[minmax(0,390px)_minmax(0,1fr)] xl:items-center">
             <Reveal className="relative z-10 min-w-0">
               <SectionHeader num="03" id="action-title" eyebrow="See DocVise in action"
-                title={<>From Instructions to Illustrations.<br className="hidden sm:inline" /> On WhatsApp.</>}
+                title={<>From Instructions to<br className="hidden sm:inline" />  Illustrations.On WhatsApp.</>}
                 sub={<>Example: the doctor types four<br className="hidden xl:inline" /> instructions and selects Marathi.</>} titleClass="xl:text-[27px]" />
               <div className="mt-7 hidden xl:block"><Button variant="outline" onClick={() => open('demo')}>Try the Interactive Demo</Button></div>
             </Reveal>
