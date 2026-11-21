@@ -17,7 +17,7 @@ export default function InAction() {
             <Reveal className="relative z-10 min-w-0">
               <SectionHeader num="03" id="action-title" eyebrow="See DocVise in action"
                 title={<>From Instructions to Illustrations.<br className="hidden sm:inline" /> On WhatsApp.</>}
-                sub="Example: the doctor types four instructions and selects Marathi." titleClass="xl:text-[27px]" />
+                sub={<>Example: the doctor types four<br className="hidden xl:inline" /> instructions and selects Marathi.</>} titleClass="xl:text-[27px]" />
               <div className="mt-7 hidden xl:block"><Button variant="outline" onClick={() => open('demo')}>Try the Interactive Demo</Button></div>
             </Reveal>
 
