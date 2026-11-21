@@ -58,8 +58,8 @@ export default function AnalyticsAndCta() {
         aria-labelledby="analytics-title"
         className="scroll-mt-20 lg:py-4 lg:grid lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.85fr)] lg:items-center lg:gap-8"
       >
-        <div className="min-w-0">
-          <Reveal>
+        <div className="min-w-0 lg:relative lg:z-10">
+          <Reveal className="lg:w-[140%]">
             <SectionHeader
               num="06"
               id="analytics-title"
@@ -69,7 +69,8 @@ export default function AnalyticsAndCta() {
               titleClass="lg:text-[30px]"
             />
           </Reveal>
-          <Reveal delay={0.05} className="mt-7 lg:max-w-[75%]">
+          {/* <Reveal delay={0.05} className="mt-7 lg:max-w-[73%]"> */}
+          <Reveal delay={0.05} className="mt-7 lg:max-w-[70%] mx-auto">
             <DashboardPreview />
           </Reveal>
         </div>

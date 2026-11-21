@@ -61,7 +61,7 @@ export default function Multilingual() {
             </li>
           ))}
         </ul>
-        <div className={cx('mx-auto mt-4 flex items-center justify-center gap-3', !scrollable && 'invisible')} aria-hidden={!scrollable}>
+        <div className={cx('mx-auto mt-4 flex items-center justify-center gap-3', !scrollable && 'hidden')} aria-hidden={!scrollable}>
           <div className="flex gap-1.5" role="tablist" aria-label="Language examples">
             {CARDS.map((c, i) => (
               <button key={c.code} type="button" role="tab" aria-selected={state.index === i} aria-label={`Show example ${i + 1}`} tabIndex={scrollable ? 0 : -1}
