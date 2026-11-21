@@ -73,7 +73,7 @@ export default function AnalyticsAndCta() {
             <DashboardPreview />
           </Reveal>
         </div>
-        <ul className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-3 xl:gap-3 lg:mt-0 lg:grid-cols-2 lg:gap-4 lg:content-center">
+        <ul className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-3 xl:gap-3 lg:mt-[140px] lg:grid-cols-2 lg:gap-4 lg:content-center">
           {/* {HIGHLIGHTS.map((h, i) => (
             <Reveal
               as="li"
