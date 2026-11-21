@@ -1,6 +1,5 @@
-import { HeartHandshake, RefreshCw, BarChart3, Users, TrendingUp } from 'lucide-react';
+import { HeartHandshake, RefreshCw, BarChart3, Users } from 'lucide-react';
 import { SectionHeader, Reveal } from '../components/ui.jsx';
-import DashboardPreview from '../components/DashboardPreview.jsx';
 
 const BENEFITS = [
   { icon: HeartHandshake, title: 'Engage Doctors', text: 'Offer a useful patient-education service doctors can access in everyday practice.' },
@@ -12,7 +11,7 @@ const BENEFITS = [
 export default function WhyDocVise() {
   return (
     <section id="why-docvise" aria-labelledby="why-title" className="scroll-mt-20 py-8 lg:py-16">
-      <div className="container-site grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:items-center">
+      <div className="container-site">
         <div>
           <Reveal>
             <SectionHeader num="05" id="why-title" eyebrow="Why DocVise for your brand"
@@ -32,14 +31,6 @@ export default function WhyDocVise() {
           </ul>
         </div>
 
-        {/* Desktop shows the dashboard here (approved desktop layout); mobile shows it in Analytics. */}
-        <Reveal delay={0.1} className="relative hidden pb-8 lg:block">
-          <DashboardPreview showBase={false} />
-          <div className="absolute -bottom-1 left-[6%] right-[6%] flex items-center gap-3 rounded-2xl bg-gradient-to-r from-brand-700 to-brand-500 px-5 py-3.5 text-white shadow-float">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-orange"><TrendingUp className="h-5 w-5" aria-hidden="true" /></span>
-            <span className="font-display text-[16px] font-semibold">Complete Visibility. Better Decisions.</span>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
