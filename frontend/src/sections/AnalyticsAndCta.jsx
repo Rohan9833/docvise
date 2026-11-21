@@ -52,7 +52,7 @@ const HIGHLIGHTS = [
 export default function AnalyticsAndCta() {
   const { open } = useModal();
   return (
-    <div className="container-site grid gap-8 pb-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] pb-8 lg:items-stretch lg:gap-6 lg:pb-10">
+    <div className="container-site grid gap-8 pb-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] pb-8 lg:items-stretch lg:gap-6 lg:pb-4">
       <section
         id="analytics"
         aria-labelledby="analytics-title"

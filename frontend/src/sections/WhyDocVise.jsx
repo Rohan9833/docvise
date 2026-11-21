@@ -10,7 +10,7 @@ const BENEFITS = [
 
 export default function WhyDocVise() {
   return (
-    <section id="why-docvise" aria-labelledby="why-title" className="scroll-mt-20 py-8 lg:py-10">
+    <section id="why-docvise" aria-labelledby="why-title" className="scroll-mt-20 py-8 lg:py-5">
       <div className="container-site">
         <div>
           <Reveal>

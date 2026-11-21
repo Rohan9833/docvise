@@ -39,7 +39,7 @@ export default function Multilingual() {
   const scrollable = state.canPrev || state.canNext;
 
   return (
-    <section id="multilingual" aria-labelledby="ml-title" className="scroll-mt-20 py-8 lg:py-10">
+    <section id="multilingual" aria-labelledby="ml-title" className="scroll-mt-20 py-8 lg:py-5">
       <div className="container-site">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <Reveal>

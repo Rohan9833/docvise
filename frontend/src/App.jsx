@@ -27,7 +27,7 @@ function Disclaimer() {
   return (
     <section
       aria-labelledby="disclaimer-heading"
-      className="bg-white py-4 sm:py-10 lg:py-6"
+      className="bg-white py-4 sm:py-10 lg:py-1"
     >
       <div className="container-site">
         <div className="flex items-start gap-4 rounded-[24px] bg-brand-700 px-5 py-6 text-white sm:gap-5 sm:px-7 sm:py-8 md:rounded-[28px]">
