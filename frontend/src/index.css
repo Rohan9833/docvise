@@ -34,7 +34,7 @@
 
 @layer base {
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
-  body { overflow-x: clip; }
+  body, #root { width: 100%; max-width: 100%; overflow-x: clip; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   body { @apply bg-white font-sans text-ink antialiased; }
   h1, h2, h3 { @apply font-display text-navy; letter-spacing: -0.01em; }
