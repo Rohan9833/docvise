@@ -54,17 +54,13 @@ export default function HowItWorks() {
       className="scroll-mt-20 py-8 lg:py-5"
     >
       <div className="container-site">
-        <Reveal>
+        <Reveal className="lg:w-[140%]">
           <SectionHeader
             num="02"
             id="how-title"
             eyebrow="How DocVise works"
-            title={
-              <>
-                One QR Scan. A Few Instructions.
-                <br className="hidden sm:inline" /> A Personalised PDF.
-              </>
-            }
+            title="One QR Scan. A Few Instructions. A Personalised PDF."
+            titleClass="lg:whitespace-nowrap"
             sub="No app to install. The entire journey happens on WhatsApp."
           />
         </Reveal>
