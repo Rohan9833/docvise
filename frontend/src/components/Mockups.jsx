@@ -66,8 +66,8 @@ function WaHeader({ subtitle = 'Business account' }) {
       <StatusBar dark />
       <div className="flex items-center gap-2 px-2.5 pb-2.5">
         <ChevronLeft className="h-4 w-4 shrink-0" />
-        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white">
-          <img src="/assets/docvise-mark.png" alt="" className="h-5 w-5" width="20" height="20" />
+        <span className="flex h-7 w-11 shrink-0 items-center justify-center rounded bg-white px-1">
+          <img src="/assets/docvise-logo.png" alt="" className="h-auto w-full" width="800" height="233" />
         </span>
         <span className="min-w-0 flex-1 leading-tight">
           <span className="block text-[12.5px] font-bold">DocVise</span>

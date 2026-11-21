@@ -48,7 +48,7 @@ export default function DashboardPreview({ className, showBase = true }) {
       <div className="rounded-[14px] bg-[#1b1f2e] p-[6px] shadow-float sm:p-1">
         <div className="flex overflow-hidden rounded-lg bg-[#f7f6fc]" role="img" aria-label="Preview of the DocVise Head Office dashboard showing QR scans, active doctors, PDFs delivered, WhatsApp interactions, a usage trend and language usage, with sample data">
           <aside className="hidden w-[22%] shrink-0 flex-col gap-1 bg-gradient-to-b from-navy-950 to-brand-700 p-2 text-white xs:flex" aria-hidden="true">
-            <span className="mb-1 flex items-center gap-1"><img src="/assets/docvise-mark.png" alt="" className="h-4 w-4" width="16" height="16" /><b className="text-[8px] sm:text-[9px]">Head Office</b></span>
+            <span className="mb-1 flex flex-col gap-1"><img src="/assets/docvise-logo.png" alt="" className="h-auto w-full" width="800" height="233" /><b className="text-[8px] sm:text-[9px]">Head Office</b></span>
             {NAV.map(([I, l], i) => (
               <span key={l} className={cx('flex items-center gap-1 rounded px-1 py-[3px] text-[6.5px] sm:text-[7.5px]', i === 0 ? 'bg-brand-500' : 'text-white/80')}><I className="h-2.5 w-2.5 shrink-0" />{l}</span>
             ))}

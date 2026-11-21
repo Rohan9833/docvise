@@ -7,18 +7,15 @@ export { cx };
 /** Official DocVise logo (supplied artwork – never recreated as text). */
 export function Logo({ className = "h-10 w-auto", eager = false }) {
   return (
-    <picture>
-      <source srcSet="/assets/docvise-logo.png" type="image/webp" />
-      <img
-        src="/assets/docvise-logo.png"
-        alt="DocVise – Doctor's Advice. Made Visual. Made Simple."
-        width="800"
-        height="233"
-        className={className}
-        loading={eager ? "eager" : "lazy"}
-        decoding="async"
-      />
-    </picture>
+    <img
+      src="/assets/docvise-logo.png"
+      alt="DocVise – Doctor's Advice. Made Visual. Made Simple."
+      width="800"
+      height="233"
+      className={className}
+      loading={eager ? "eager" : "lazy"}
+      decoding="async"
+    />
   );
 }
 
