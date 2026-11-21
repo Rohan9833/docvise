@@ -42,9 +42,9 @@ export default function Multilingual() {
     <section id="multilingual" aria-labelledby="ml-title" className="scroll-mt-20 py-8 lg:py-5">
       <div className="container-site">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <Reveal>
+          <Reveal className="xl:w-[140%] relative z-10">
             <SectionHeader num="04" id="ml-title" eyebrow="Multilingual patient education"
-              title={<>The Doctor Advises in English.<br className="hidden sm:inline" /> The Patient Understands in Their Language.</>}
+              title="The Doctor Advises in English. The Patient Understands in Their Language." titleClass="xl:whitespace-nowrap xl:text-[30px]"
               sub="One instruction. Multiple languages. The same visual clarity." />
           </Reveal>
 
