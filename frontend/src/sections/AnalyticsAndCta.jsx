@@ -122,7 +122,7 @@ export default function AnalyticsAndCta() {
         className="scroll-mt-20 lg:self-start"
       >
         <Reveal className="relative overflow-hidden rounded-[2rem] border border-line bg-[linear-gradient(135deg,#f6f2fe_0%,#fbf9ff_50%,#eef4ff_100%)] p-6 sm:p-8 lg:p-6">
-          <div className="grid grid-cols-1 items-center gap-6">
+          <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-8">
             <div className="order-2">
               <SectionHeader
                 id="cta-title"
