@@ -10,7 +10,7 @@ const Arrow = ({ className }) => <ChevronRight aria-hidden="true" className={`h-
 export default function InAction() {
   const { open } = useModal();
   return (
-    <section id="in-action" aria-labelledby="action-title" className="scroll-mt-20 py-4 lg:py-8">
+    <section id="in-action" aria-labelledby="action-title" className="scroll-mt-20 py-4 lg:py-4">
       <div className="container-site">
         <div className="rounded-[2rem] border border-line bg-[linear-gradient(135deg,#f6f2fe_0%,#f9f7ff_55%,#eef4ff_100%)] px-4 py-8 sm:px-8 sm:py-10 lg:px-10">
           <div className="grid gap-8 xl:grid-cols-[minmax(0,330px)_1fr] xl:items-center">
