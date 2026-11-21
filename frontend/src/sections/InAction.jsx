@@ -1,6 +1,6 @@
 import { ChevronRight } from 'lucide-react';
 import { SectionHeader, Reveal, Button } from '../components/ui.jsx';
-import { PhoneFrame, InstructionsChat, PdfGrid, ProcessingCard, Scaled } from '../components/Mockups.jsx';
+import { PhoneFrame, InstructionsChat, PdfGrid, Scaled } from '../components/Mockups.jsx';
 import { useModal } from '../hooks/useModal.js';
 import demo from '../data/demo-languages.json';
 
@@ -22,14 +22,12 @@ export default function InAction() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              {/* Wide: phone → processing → PDF. Narrow (approved mobile design): phone → PDF. */}
-              <Scaled base={840} className="mx-auto hidden max-w-[840px] md:block">
+              {/* Desktop and mobile use the same phone → PDF flow. */}
+              <Scaled base={680} className="mx-auto hidden max-w-[680px] md:block">
                 <div className="flex items-center gap-3">
                   <PhoneFrame label="Doctor's instructions on WhatsApp: Do CBC, Do BMD test, Do chest X-ray, Reduce weight; patient language Marathi" className="w-[236px] shrink-0">
                     <InstructionsChat />
                   </PhoneFrame>
-                  <Arrow />
-                  <ProcessingCard className="w-[150px] shrink-0" />
                   <Arrow />
                   <PdfGrid lang={MARATHI} className="w-[370px] shrink-0" />
                 </div>
