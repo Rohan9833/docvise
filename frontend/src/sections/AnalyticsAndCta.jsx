@@ -69,7 +69,7 @@ export default function AnalyticsAndCta() {
               titleClass="lg:text-[30px]"
             />
           </Reveal>
-          <Reveal delay={0.05} className="mt-7 lg:max-w-[85%]">
+          <Reveal delay={0.05} className="mt-7 lg:max-w-[75%]">
             <DashboardPreview />
           </Reveal>
         </div>
