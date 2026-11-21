@@ -120,8 +120,8 @@ export default function AnalyticsAndCta() {
         className="scroll-mt-20 lg:self-start"
       >
         <Reveal className="relative overflow-hidden rounded-[2rem] border border-line bg-[linear-gradient(135deg,#f6f2fe_0%,#fbf9ff_50%,#eef4ff_100%)] p-6 sm:p-8 lg:p-6">
-          <div className="grid items-center gap-6 sm:grid-cols-1 lg:grid-cols-[minmax(0,1fr)_200px] xl:grid-cols-[minmax(0,1fr)_230px]">
-            <div className="order-2 sm:order-1 lg:order-1">
+          <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-[minmax(0,1fr)_230px] xl:grid-cols-[minmax(0,1fr)_260px]">
+            <div className="order-2 lg:order-1">
               <SectionHeader
                 id="cta-title"
                 eyebrow="Bring DocVise to your brand"
@@ -134,7 +134,7 @@ export default function AnalyticsAndCta() {
               </p>
               <Button
                 size="lg"
-                className="mt-6 w-full sm:w-auto"
+                className="mt-6 w-full lg:w-auto"
                 onClick={() => {
                   button_click({
                     button_name: "request_demo",
@@ -148,7 +148,7 @@ export default function AnalyticsAndCta() {
             </div>
             <Scaled
               base={500}
-              className="order-1 mx-auto max-w-[280px] sm:order-2 lg:order-2 lg:max-w-none"
+              className="order-1 mx-auto max-w-[280px] sm:max-w-[320px] lg:order-2 lg:max-w-none"
               label="DocVise on WhatsApp beside a QR tent card for the doctor's clinic, with space for the supporting brand"
             >
               <div className="relative h-[520px]">
